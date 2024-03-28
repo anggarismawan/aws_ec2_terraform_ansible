@@ -2,20 +2,20 @@ terraform {
  required_providers {
    aws = {
      source  = "hashicorp/aws"
-     version = "~> 4.31.0"
+    # version = "~> 4.31.0"
    }
  }
 }
 
 provider "aws" {
-  alias = "eu"
-  region = "eu-central-1"
+  alias = "ap"
+  region = "ap-southeast-3"
 }
 
 data "aws_region" "current" {}
 
 resource "aws_vpc" "main" {
-  cidr_block = "10.0.0.0/16" 
+  cidr_block = "10.100.0.0/16" 
   enable_dns_hostnames = true
 
   tags = {
