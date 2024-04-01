@@ -1,6 +1,6 @@
 # below we define with the variable instance_count how many servers we want to create
 variable "instance_count" {
-  default = "3"
+  default = "2"
 }
 
 # below we define the default server names
